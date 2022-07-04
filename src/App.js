@@ -1,15 +1,15 @@
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 
 
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 
 
@@ -55,16 +55,21 @@ function App() {
       <Alert alert={alert} />
 
       <div className="container my-3">
+         {<TextForm showAlert={showAlert} heading="TextUtils - Word Counter, Character Counter , Remove Extra Spaces" mode={mode} />}
+         {/* {<About mode={mode} />} */}
+      </div>
+
+      {/* <div className="container my-3">
         <Routes>
           {/* /users  --> Components 1
           /users/home  --> Components 2 */}
-          <Route exact path="/about" element={<About mode={mode} />} />
-          < Route exact path="/"
-           element= 
-          {<TextForm showAlert={showAlert} heading="TextUtils - Word Counter, Character Counter , Remove Extra Spaces" mode={mode} />}
-           /> 
-        </Routes>
-       </div> 
+          {/* <Route exact path="/about" element={<About mode={mode} />} /> */}
+          {/* < Route exact path="/" */}
+           {/* element=  */}
+          {/* {<TextForm showAlert={showAlert} heading="TextUtils - Word Counter, Character Counter , Remove Extra Spaces" mode={mode} />} */}
+           {/* />  */}
+        {/* </Routes> */}
+       {/* </div>  */}
 
     </>
   );
